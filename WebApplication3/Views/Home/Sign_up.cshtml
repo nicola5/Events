@@ -1,4 +1,5 @@
-﻿
+﻿@model WebApplication3.Models.Persona
+
 @{
     ViewBag.Title = "Sign_up";
 }
@@ -33,10 +34,10 @@
 
         <nav id="nav-menu-container">
             <ul class="nav-menu">
-                <li class="menu-active"><a href="~/Home/index">Inicio</a></li>
-                <li><a href="#registrar">Registrar</a></li>
-                <li><a href="/Home/Index/#team">Desarrolladores</a></li>
-                <li><a href="/Home/Index/#contact">Contacto</a></li>
+                <li class="menu-active"><a href="~/Home/Index">Inicio</a></li>
+                <li><a href="~/Home/Sign_up">Registrar</a></li>
+                <li><a href="~/Home/Index/#team">Desarrolladores</a></li>
+                <li><a href="~/Home/Index/#contact">Contacto</a></li>
             </ul>
         </nav><!-- #nav-menu-container -->
     </div>
@@ -48,12 +49,18 @@
 ============================-->
 <section id="hero">
     <div class="hero-container">
-        <h1>
+        <h2>
+            Usuario
             <input type="text" name="user" class="form-control" id="user" placeholder="Usuario" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-            <input type="text" name="pass" class="form-control" id="pass" placeholder="Contraseña" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+            Contraseña
+            <input type="password" name="pass" class="form-control" id="pass" placeholder="**********" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+            Nombre
             <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-        </h1>
-        <a href="" class="btn-get-started">Registrar</a>
+            Apellido
+            <input type="text" name="apellido" class="form-control" id="nombre" placeholder="Nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+            <br />
+            <input type="submit" class="btn btn-primary btn-round btn-lg btn-block" value="Registrar" id="btn" onclick="return chekear();">
+        </h2>
         
         <div class="validation"></div>
     </div>

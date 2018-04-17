@@ -1,4 +1,5 @@
-﻿
+﻿@model WebApplication3.Models.User_Modelos
+
 @{
     ViewBag.Title = "Login";
 }
@@ -32,10 +33,10 @@
 
         <nav id="nav-menu-container">
             <ul class="nav-menu">
-                <li class="menu-active"><a href="~/Home/index">Inicio</a></li>
-                <li><a href="#registrar">Registrar</a></li>
-                <li><a href="/Home/Index/#team">Desarrolladores</a></li>
-                <li><a href="/Home/Index/#contact">Contacto</a></li>
+                <li class="menu-active"><a href="~/Home/Index">Inicio</a></li>
+                <li><a href="~/Home/Sign_up">Registrar</a></li>
+                <li><a href="~/Home/Index/#team">Desarrolladores</a></li>
+                <li><a href="~/Home/Index/#contact">Contacto</a></li>
             </ul>
         </nav><!-- #nav-menu-container -->
     </div>
@@ -47,29 +48,19 @@
 ============================-->
 <section id="hero">
     <div class="hero-container">
+        <h2>
+            Usuario
+            <input type="text" name="user" class="form-control" id="user" placeholder="Usuario" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+            Contraseña
+            <input type="password" name="pass" class="form-control" id="pass" placeholder="**********" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+            <br />
+            <input type="submit" class="btn btn-primary btn-round btn-lg btn-block" value="Registrar" id="btn" onclick="return chekear();">
+        </h2>
 
-        <div class="form-group">
-            <h1>
-                <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-            </h1>
-            <div class="validation"></div>
-        </div>
-        <div class="form-group">
-            <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email" />
-            <div class="validation"></div>
-        </div>
-        <div class="form-group">
-            <input type="text" class="form-control" name="subject" id="subject" placeholder="Motivo" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-            <div class="validation"></div>
-        </div>
-        <div class="form-group">
-            <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mensaje"></textarea>
-            <div class="validation"></div>
-        </div>        
-        <a href="" class="btn-get-started">Registrar</a>
+        <div class="validation"></div>
     </div>
-</section><!-- #hero -->
-<!--==========================
+</section>
+
 <!--==========================
   Footer
 ============================-->
@@ -110,6 +101,3 @@
 
 <!-- Template Main Javascript File -->
 <script src="~/scripts/Libreria/js/main.js"></script>
-
-
-

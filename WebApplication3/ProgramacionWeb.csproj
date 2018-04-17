@@ -124,7 +124,6 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\css\contactform.js" />
     <Content Include="Content\css\learn.css" />
     <Content Include="Content\css\scss-files.txt" />
     <Content Include="Content\css\style.css" />
@@ -132,7 +131,7 @@
     <Content Include="Content\img\apple-touch-icon.png" />
     <Content Include="Content\img\call-to-action-bg.jpg" />
     <Content Include="Content\img\favicon.png" />
-    <Content Include="Content\img\hero-bg.jpg" />
+    <Content Include="Content\img\hero-bg1.jpg" />
     <Content Include="Content\img\logo.png" />
     <Content Include="Content\img\portfolio\app1.jpg" />
     <Content Include="Content\img\portfolio\app2.jpg" />
@@ -160,7 +159,7 @@
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
-    <Content Include="scripts\Libreria\contactform.js" />
+    <Content Include="Content\css\contactform.js" />
     <Content Include="scripts\Libreria\custom.js" />
     <Content Include="scripts\Libreria\js\main.js" />
     <Content Include="scripts\Libreria\lib\animate\animate.css" />
@@ -196,6 +195,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\Home\HomeController.cs" />
+    <Compile Include="Controllers\Menu\MenuController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -221,6 +221,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Menu\Menu.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -230,7 +231,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Sign_up\" />
+    <Folder Include="scripts\Validacion\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
