@@ -200,12 +200,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Persona.cs" />
-    <Compile Include="Models\User_Modelos.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Servicios\Conexion.cs" />
     <Compile Include="Servicios\Persona_Servicio.cs" />
-    <Compile Include="Servicios\User.cs" />
     <Compile Include="Servicios\User_Servicios.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -221,6 +219,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Home\Menu.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

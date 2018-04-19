@@ -9,20 +9,12 @@ namespace WebApplication3.Servicios
     public class User_Servicios
     {
         Conexion con = new Conexion();
-        public bool Login(User_Modelos user)
-        {
-            string sql = "SELECT * FROM datos WHERE login = '" + user.user + "' AND password = '" + user.pass + "';";
-            return false;
-        }
-        //public bool registrar(User_Modelos user)
-        //{
-        //    try
-        //    {
 
-        //    }catch (Exception)
-        //    {
-        //        return false;
-        //    }
-        //}
+        internal bool Login(Usuario usr)
+        {
+            string sql = "SELECT * FROM cuenta WHERE Usuario = '" + usr.user + "' AND Contra = '" + usr.pass + "';";
+            Console.WriteLine(usr.user + "  ksjahfskjdfbsd ");
+            return (con.EjecutarConsulta(sql).Rows.Count > 0) ? true : false;
+        }
     }
 }

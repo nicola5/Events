@@ -11,10 +11,9 @@ namespace WebApplication3.Models
         public string user { get; set; }
         public string pass { get; set; }
 
-        public bool Login()
-        {
-            return usr.Login(this);
-        }
+        //public bool Login()        //{
+        //    return usr.Login(this);
+        //}
 
     }
 }

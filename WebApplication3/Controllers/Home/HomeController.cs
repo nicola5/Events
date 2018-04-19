@@ -14,22 +14,36 @@ namespace WebApplication3.Controllers
         {
             return View();
         }
-
         [HttpGet]
-        public ActionResult Login(User_Modelos user)
+        public ActionResult Login()
         {
-            if (user.Login())
+            Session["Inicio"] = "";
+            Session["User"] = "Logout";
+            return View();
+        }
+
+
+        [HttpPost]
+        public ActionResult Login(Usuario user)
+        {
+            if (user.login(user))
             {
                 Session["Inicio"] = "OK";
                 Session["User"]= user.user;
-                return RedirectToAction("../Menu/Menu");
+                return RedirectToAction("../Home/Menu");
             }else
             {
                 return View();
             }
         }
 
-        public ActionResult Sign_up(User_Modelos user)
+        public ActionResult Sign_up(Usuario user)
+        {
+
+            return View();
+        }
+
+        public ActionResult Menu(Usuario user)
         {
 
             return View();

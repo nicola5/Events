@@ -1,4 +1,4 @@
-﻿@model WebApplication3.Models.User_Modelos
+﻿@model WebApplication3.Models.Usuario
 
 @{
     ViewBag.Title = "Login";
@@ -49,12 +49,15 @@
 <section id="hero">
     <div class="hero-container">
         <h2>
-            Usuario
-            <input type="text" name="user" class="form-control" id="user" placeholder="Usuario" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-            Contraseña
-            <input type="password" name="pass" class="form-control" id="pass" placeholder="**********" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-            <br />
-            <input type="submit" class="btn btn-primary btn-round btn-lg btn-block" value="Registrar" id="btn" onclick="return chekear();">
+            @using (Html.BeginForm("Login", "Home", FormMethod.Post, new { @Class = "form validate-form", @id = "validate-form" }))
+            {
+                <label>Usuario</label>
+                <input type="text" name="user" class="form-control" id="user" placeholder="Usuario" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <label>Contraseña</label>
+                <input type="password" name="pass" class="form-control" id="pass" placeholder="*******" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <br />
+                <input type="submit" class="btn btn-primary btn-round btn-lg btn-block" value="Iniciar Sesion" id="btn">
+            }
         </h2>
 
         <div class="validation"></div>
@@ -85,7 +88,6 @@
 
 <!-- JavaScript Libraries -->
 <script src="~/scripts/Libreria/lib/jquery/jquery.min.js"></script>
-<script src="~/scripts/Libreria/lib/jquery/jquery-migrate.min.js"></script>
 <script src="~/scripts/Libreria/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="~/scripts/Libreria/lib/easing/easing.min.js"></script>
 <script src="~/scripts/Libreria/lib/wow/wow.min.js"></script>
@@ -100,4 +102,3 @@
 <script src="~/Content/Css/contactform.js"></script>
 
 <!-- Template Main Javascript File -->
-<script src="~/scripts/Libreria/js/main.js"></script>

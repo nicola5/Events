@@ -48,23 +48,23 @@ namespace WebApplication3.Servicios
                 throw new Exception("No se realizó ninguna operación de Registro en la Base de Datos." + e.ToString());
             }
         }
-        //public DataTable EjecutarConsulta(string Select)
-        //{
-        //    DataTable dt = new DataTable();
-        //    MySqlCommand mySqlCommand = new MySqlCommand();
-        //    mySqlCommand.CommandText = Select;
-        //    try
-        //    {
-        //        MySqlDataAdapter da = new MySqlDataAdapter(Select, ConexionMySql());
-        //        da.Fill(dt);
-        //        desconectar();
-        //        return dt;
-        //    }
-        //    catch
-        //    {
-        //        desconectar();
-        //        throw new Exception("Sentencia SQL de consulta invalida.");
-        //    }
-        //}
+        public DataTable EjecutarConsulta(string Select)
+        {
+            DataTable dt = new DataTable();
+            MySqlCommand mySqlCommand = new MySqlCommand();
+            mySqlCommand.CommandText = Select;
+            try
+            {
+                MySqlDataAdapter da = new MySqlDataAdapter(Select, ConexionMySql());
+                da.Fill(dt);
+                desconectar();
+                return dt;
+            }
+            catch
+            {
+                desconectar();
+                throw new Exception("Sentencia SQL de consulta invalida.");
+            }
+        }
     }
 }
