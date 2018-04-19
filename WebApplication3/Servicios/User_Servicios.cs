@@ -16,5 +16,6 @@ namespace WebApplication3.Servicios
             Console.WriteLine(usr.user + "  ksjahfskjdfbsd ");
             return (con.EjecutarConsulta(sql).Rows.Count > 0) ? true : false;
         }
+        //asdasdasd
     }
 }
