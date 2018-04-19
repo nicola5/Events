@@ -65,7 +65,6 @@ namespace WebApplication3.Servicios
                 desconectar();
                 throw new Exception("Sentencia SQL de consulta invalida.");
             }
-            //aksedgasd
         }
     }
 }
